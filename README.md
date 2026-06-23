@@ -1,21 +1,50 @@
-Prerequisites
-Install the requests library:
+# Web Login Brute Force Script
+
+A lightweight, command-line Python script designed to perform dictionary-based brute-force attacks against HTTP POST login endpoints. It automates credential auditing by submitting a fixed username alongside a list of target passwords.
+
+## 🚀 Features
+
+- **Automated POST Requests**: Submits credentials using standard application/x-www-form-urlencoded payloads.
+- **Success Identification**: Scans target HTTP response bodies for a successful login signature (`"Login successful"`).
+- **Real-time Console Output**: Prints the tracking status of every password attempt instantly.
+- **Zero External Dependencies**: Operates entirely within standard Python environments (requires only the third-party `requests` library).
+
+## 📋 Requirements
+
+- **Python**: Version 3.6 or higher.
+- **Library**: `requests` package.
+
+You can install the required dependency via pip:
+```bash
 pip install requests
+```
 
-Usage
-Save the script as web_brute_force.py.
+## 🛠️ Usage
 
-Create a file containing a list of passwords (one per line).
+Run the script from your terminal by passing the target URL, target username, and the path to your password dictionary file as positional arguments.
 
-Run the script:
+```bash
+python web_brute_force.py <URL> <USERNAME> <PASSWORD_FILE>
+```
 
+### Example Command
 
-python web_brute_force.py <url> <username> <password_file>
-Example
+```bash
+python web_brute_force.py http://example.com admin passwords.txt
+```
 
-python web_brute_force.py http://example.com/login admin passwords.txt
+## ⚙️ Input File Format
 
-Notes
-Ensure you have permission to test the target web service.
+The password dictionary file should contain one password per line with no additional delimiter characters:
 
-This script is for educational purposes only. Unauthorized access to systems is illegal and unethical.****
+```text
+password123
+admin2026
+qwerty
+letmein123
+```
+
+## 📜 Disclaimer
+
+> [!WARNING]
+> This tool is developed strictly for authorized security auditing, penetration testing, and educational purposes. Running this script against targets without explicit, prior written consent from the asset owner is illegal and violates computer fraud laws. The developers assume no liability for misuse or damage caused by this software.
