@@ -1,4 +1,6 @@
 # Web Login Brute Force Script
+<img width="1376" height="768" alt="image" src="https://github.com/user-attachments/assets/374c5340-022d-452c-b8ae-8de52a2afd69" />
+
 
 A lightweight, command-line Python script designed to perform dictionary-based brute-force attacks against HTTP POST login endpoints. It automates credential auditing by submitting a fixed username alongside a list of target passwords.
 
